@@ -23,6 +23,8 @@ Examples
 from imageio import imread, imwrite
 from fix_your_jet import fix
 
-example_fix = fix(imread('example.png'))
+example_fix = fix(imread('example.png'),
+                  from_cmap='jet', to_cmap='RdBu_r',
+                  threshold=100)
 imwrite('example_fix.png', example_fix)
 ```
